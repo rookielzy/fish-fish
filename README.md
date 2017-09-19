@@ -1,2 +1,1 @@
-# fish-fish
-A React Fish Market WebApp
+# Fish-Fish
