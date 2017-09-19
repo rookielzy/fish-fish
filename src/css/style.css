@@ -343,3 +343,22 @@ input#fold:checked + label {
 	background: #fff;
 	color: #000;
 }
+
+/* StorePicker Start */
+.store-selector {
+	background: #fff;
+	max-width: 500px;
+	margin: 50px auto;
+	padding: 2rem;
+	border: 2px solid #000;
+}
+
+.store-selector input, .store-selector button {
+	width: 100%;
+}
+
+.store-selector input[type="text"], .store-selector button[type="text"] {
+	text-align: center;
+	font-size: 3rem;
+}
+/* StorePicker End */
