@@ -11,6 +11,7 @@ import Header from './components/Header';
 import Order from './components/Order';
 import Inventory from './components/Inventory';
 import Fish from './components/Fish';
+import base from './base';
 import './css/style.css';
 import sampleFishes from './sample-fishes';
 
@@ -58,7 +59,10 @@ class App extends React.Component {
                         }
                     </ul>
                 </div>
-                <Order />
+                <Order 
+                    fishes={this.state.fishes}
+                    order={this.state.order}
+                />
                 <Inventory
                     addFish={this.addFish}
                     loadSamples={this.loadSamples}
