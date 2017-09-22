@@ -134,9 +134,11 @@ const NotFound = () => (
     </div>
 )
 
+const repo = `/${window.location.pathname.split('/')[1]}`;
+
 const Root = () => {
     return (
-        <Router>
+        <Router basename={repo}>
             <Switch>
                 <Route exact path="/" component={StorePicker} />
                 <Route path="/store/:storeId" component={App} />
