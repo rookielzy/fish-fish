@@ -5,6 +5,7 @@ import {
     Route,
     Switch
 } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import registerServiceWorker from './registerServiceWorker';
 import StorePicker from './components/StorePicker';
 import Header from './components/Header';
@@ -121,6 +122,10 @@ class App extends React.Component {
         );
     }
 }
+
+App.propTypes = {
+    match: PropTypes.object.isRequired
+};
 
 const NotFound = () => (
     <div>
