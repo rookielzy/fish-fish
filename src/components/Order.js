@@ -11,7 +11,7 @@ class Order extends React.Component {
         const removeButton = <button onClick={() => this.props.removeFromOrder(key)}>&times;</button>
 
         if (!fish || fish.status === 'unavailable') {
-            return <li key={key}>Sorry, {fish ? fish.name : 'Fish'} is no longer available!{removeButton}</li>
+            return <li key={key}>不好意思, {fish ? fish.name : '这种'} 已经卖完啦!{removeButton}</li>
         }
 
         return (
@@ -26,7 +26,7 @@ class Order extends React.Component {
                     >
                         <span key={count}>{count}</span>
                     </CSSTransitionGroup>
-                    lbs {fish.name} {removeButton}
+                    份 {fish.name} {removeButton}
                 </span>
                 <span className="price">{formatPrice(count * fish.price)}</span>
             </li>
@@ -48,7 +48,7 @@ class Order extends React.Component {
         }, 0);
         return (
             <div className="order-wrap">
-                <h2>Your Order</h2>
+                <h2>您的订单</h2>
                 <CSSTransitionGroup
                     className="order"
                     component="ul"
@@ -58,7 +58,7 @@ class Order extends React.Component {
                 >
                     {orderIds.map(this.renderOrder)}
                     <li className="total">
-                        <strong>Total:</strong>
+                        <strong>总计:</strong>
                         {formatPrice(total)}
                     </li>
                 </CSSTransitionGroup>

@@ -22,14 +22,14 @@ class StorePicker extends React.Component {
         if (!this.state.redirect) {
             return (
                 <form className="store-selector" onSubmit={this.goToStore}>
-                    <h2>Please Enter A Store</h2>
+                    <h2>请输入商店名称</h2>
                     <input type="text"
                         required
                         placeholder="Store Name"
                         defaultValue={getStoreName()}
                         ref={input => this.storeInput = input}
                     />
-                    <button type="submit">Visit Store →</button>
+                    <button type="submit">访问商店 →</button>
                 </form>
             );
         } else {

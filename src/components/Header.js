@@ -5,12 +5,12 @@ const Header = (props) => {
     return (
         <header className="top">
             <h1>
-                Catch
+                好多
                 <span className="ofThe">
-                    <span className="of">of</span>
-                    <span className="the">the</span>
+                    <span className="of">🐟</span>
+                    <span className="the">🐟</span>
                 </span>
-                Day
+                鱼
             </h1>
             <h3 className="tagline"><span>{props.tagline}</span></h3>
         </header>
